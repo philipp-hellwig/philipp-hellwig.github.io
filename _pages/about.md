@@ -9,6 +9,8 @@ redirect_from:
 
 Hi, my name is Philipp 👋 
 
-- I am a Psychology (research) Master's student at the University of Amsterdam.
-- I am fascinated by how we get to be so smart and adaptable
-- I explore these questions by using artificial intelligence and agent-based modelling.
+🎓 I am a Psychology (research) Master's student at the University of Amsterdam.
+
+❓ I want to understand why we *can* be so smart and adaptable.
+
+💡 I explore these questions using artificial intelligence 🤖 and agent-based modelling.
