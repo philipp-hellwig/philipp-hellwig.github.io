@@ -22,9 +22,9 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Philipp Hellwig"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "MSc. Psychology (research) student interested in artificial intelligence and complex systems."
   location         : "Amsterdam, The Netherlands"
   employer         : "University of Amsterdam"
   uri              : # URL
