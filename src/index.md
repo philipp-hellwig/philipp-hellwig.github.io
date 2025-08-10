@@ -9,7 +9,7 @@ I’m Philipp, currently doing a Research Master in Psychology at the University
 
 I am fascinated by our capabilities, and I am interested in understanding how they come to be.
 
-I am currently learning more about:
+To this end, I am currently learning more about:
 
 <ul style="margin-left: 2em;">
   <li>Programming</li>
