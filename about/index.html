@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #0077cc;
+    }
+
+    /* Two-column layout */
+    .layout {
+      display: flex;
+      gap: 2rem;
+    }
+
+    /* Profile card */
+    aside.profile-card {
+      flex: 0 0 300px;
+      padding: 1rem;
+      text-align: left;
+    }
+    aside.profile-card img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.75rem;
+    }
+
+    /* Main content */
+    main {
+      flex: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .layout {
+        flex-direction: column;
+      }
+      aside.profile-card {
+        flex: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar at top -->
+  <nav>
+    <nav>
+  <a href="/">Home</a>
+  <a href="/projects/">Projects</a>
+  <a href="/pixi/">Pixi</a>
+  <a href="/contact/">Contact</a>
+</nav>
+
+  </nav>
+
+  <!-- Two-column layout -->
+  <div class="layout">
+    <aside class="profile-card">
+      <img src="/images/profile.png" alt="Profile picture">
+      <h2 align="center">Philipp Hellwig</h2>
+      <dl>
+        <dt>🎓 MSc. Psychology (research) at the University of Amsterdam</dt>
+        <dt>📍 Amsterdam</dt>
+      </dl>
+    </aside>
+    <main>
+      <p>Here are some pictures of my favourite cat Pixi:</p>
+
+    </main>
+  </div>
+</body>
+</html>
