@@ -2,7 +2,7 @@ name: Deploy Eleventy site to GitHub Pages
 
 on:
   push:
-    branches: [ main ]  # Deploy whenever you push to main
+    branches: [ master ]  # Deploy whenever you push to 
 
 permissions:
   contents: write  # Required to push to gh-pages
