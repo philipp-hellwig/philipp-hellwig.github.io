@@ -8,6 +8,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary("md", mdLib);
 
   return {
+    pathPrefix: "/philipp-hellwig.github.io/",
     dir: {
       input: "src",
       includes: "_includes",
