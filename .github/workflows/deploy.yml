@@ -14,11 +14,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - run: npm install
-      - run: npx eleventy
+      - run: npm ci
+      - run: npx @11ty/eleventy
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
           publish_branch: gh-pages
-          force_orphan: true
+          force_orphan: true   # this is key for removing old junk
