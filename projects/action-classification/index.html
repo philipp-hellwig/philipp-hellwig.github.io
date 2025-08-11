@@ -2,164 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/styles.css" rel="stylesheet">
   <title>Video Action Classification</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      max-width: 1000px;
-      margin: auto;
-      padding: 1rem;
-      background-color: #f2e8dc;
-    }
-
-    /* Navbar */
-    .navbar-container {
-      margin-bottom: 2rem;
-      border-bottom: 1.5px solid #ddd;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2.5rem;
-      margin-bottom: 0rem;
-      background: #1c2a36;
-      padding: 0.5rem 0;
-    }
-    nav a {
-    text-decoration: none;
-    color: #ddd;
-    font-weight: bold;
-    position: relative; /* Needed for pseudo-element positioning */
-    transition: color 0.4s cubic-bezier(0.4,0,0.2,1);
-    }
-    nav a:hover,
-    nav a:focus {
-    color: #fff;
-    }
-
-    nav a::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 50%;
-    bottom: -4px;
-    height: 2px;
-    width: 0;
-    background: #bf4342;
-    transition: width 0.4s cubic-bezier(0.4,0,0.2,1), left 0.4s cubic-bezier(0.4,0,0.2,1);
-    transform: translateX(-50%);
-    }
-    nav a:hover::after,
-    nav a:focus::after {
-    width: 100%;
-    left: 50%;
-    }
-
-    /* Two-column layout */
-    .layout {
-      display: flex;
-      gap: 2rem;
-    }
-    
-    /* Lists */
-    ul {
-    padding-left: 0;
-    margin-left: 0;
-    text-align: left;
-    }
-    /* Profile card */
-    aside.profile-card {
-      flex: 0 0 300px;
-      padding: 1rem;
-      text-align: left;
-    }
-    aside.profile-card img {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 0.75rem;
-    }
-
-    /* Main content */
-    main {
-      flex: 1;
-    }
-
-    /* Responsive */
-    @media (max-width: 700px) {
-      .layout {
-        flex-direction: column;
-      }
-      aside.profile-card {
-        flex: none;
-        width: 100%;
-      }
-    }
-    /* card to display projects */
-    .project-card {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    list-style: none;
-    }
-    .project-img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 8px;
-    }
-    .project-info {
-    flex: 1;
-    }
-    .project-tags {
-    margin-top: 0.5em;
-    }
-    .project-tag {
-    display: inline-block;
-    background: #e0e0e0;
-    color: #333;
-    border-radius: 4px;
-    padding: 0.2em 0.6em;
-    font-size: 0.85em;
-    margin-right: 0.4em;
-    }
-
-  </style>
 </head>
 <body>
   <!-- Navbar at top -->
     <div class="navbar-container">
-        <nav>
-        <nav>
-  <a href="/">ABOUT</a>
-  <a href="/projects/">PROJECTS</a>
-  <a href="/pixi/">PIXI</a>
-  <a href="/contact/">CONTACT</a>
+      <nav>
+      <nav>
+  <a class="underline-hover" href="/">ABOUT</a>
+  <a class="underline-hover" href="/projects/">PROJECTS</a>
+  <a class="underline-hover" href="/contact/">CONTACT</a>
 </nav>
 
-        </nav>
+      </nav>
+      <p class="name-header" align="center"><strong>PHILIPP</strong> HELLWIG</p>
     </div>
   <!-- Two-column layout -->
   <div class="layout">
-    <aside class="profile-card">
-      <img src="/images/profile.png" alt="Profile picture">
-      <h3 align="center">Philipp Hellwig</h3>
-      <dl>
-        <dt>🎓 MSc. Psychology (research) at the University of Amsterdam</dt>
-        <dt>📍 Amsterdam</dt>
-        <dt>
-            <a href="https://linkedin.com/in/philipp-hellwig"> LinkedIn </a>
-        </dt>
-      </dl>
-    </aside>
     <main>
       
     </main>
+    
+    <!-- outputs all the icons used on the page -->
+    
   </div>
 </body>
 </html>

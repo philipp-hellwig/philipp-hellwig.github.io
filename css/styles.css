@@ -1,0 +1,231 @@
+:root {
+  --background: white;
+  --text: black;
+  --header-background: black;
+  --header-text: white;
+  --header-inactive: #aaa;
+  --decoration: #0b525b;
+  --emphasis: #bf4342;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    margin: auto;
+    color: var(--text);
+    background-color: var(--background);
+}
+
+.pfp {
+    width: 100px;
+    height: 100px;
+}
+
+hr {
+  border: 0.2px solid;
+  color: var(--decoration);
+}
+
+a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--emphasis);
+  gap: 0.4em;
+  white-space: nowrap;
+}
+
+.icon-list {
+  display: flex;
+  justify-content: center;  /* centers horizontally */
+  align-items: center;      /* centers vertically */
+  gap: 1em;                 /* space between icons */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-list li {
+  display: flex;
+  align-items: center;
+}
+
+.icon-list a svg {
+  width: 2em;
+  height: 2em;
+  color: var(--emphasis);
+  vertical-align: middle;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+.icon-list a svg:hover {
+  transform: scale(1.33);
+}
+
+
+/* non-link icons */
+svg {
+  width: 1.2em;
+  height: 1.2em;
+  color: var(--emphasis);
+  vertical-align: middle;
+}
+
+.underline-hover {
+    position: relative; /* needed for pseudo-element positioning */
+    text-decoration: none;
+    transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.underline-hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    height: 2px;
+    width: 0;
+    background: var(--emphasis);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+}
+
+.underline-hover:hover::after,
+.underline-hover:focus::after {
+    width: 100%;
+    left: 50%;
+}
+
+/* Navbar */
+.navbar-container {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid white;
+    background: var(--header-background);
+}
+
+.name-header {
+    font-size: 36px;
+    color: var(--header-text);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+    background: var(--header-background);
+    padding: 0.5rem 0;
+}
+nav a.underline-hover {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--header-inactive);
+}
+nav a.underline-hover:hover,
+nav a.underline-hover:focus {
+    color: var(--header-text);
+}
+
+
+/* Two-column layout */
+.layout {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Lists */
+ul {
+    padding-left: 0;
+    margin-left: 0;
+    text-align: left;
+}
+
+/* Profile card */
+aside.profile-card {
+    flex: 0 0 300px;
+    padding: 1rem;
+    text-align: left;
+}
+
+aside.profile-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.75rem;
+    border-radius: 50%;
+    border: 5px solid var(--decoration);
+}
+
+/* Main content */
+main {
+    flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .layout {
+    flex-direction: column;
+    }
+    aside.profile-card {
+    flex: none;
+    width: 100%;
+    }
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* responsive */
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+/* cards to display projects */
+.project-card {
+    display: flex;
+    background-image: url("/projects/default-background.png");
+    background-size: cover;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--decoration);
+    outline-width: 0.4rem;
+    outline-color: white;
+    max-width: 300px;
+    min-height: 300px;
+}
+
+
+.project-info {
+    height: 50px;
+}
+
+.project-info h3 a{
+    flex: 1;
+    text-decoration: none;
+    color: var(--header-text);
+}
+
+.project-tag {
+    display: inline-block;
+    background: var(--decoration);
+    color: var(--header-text);
+    opacity: 0.8;
+    border-radius: 10px;
+    border: 1px solid var(--header-text);
+    padding: 0.2em 0.6em;
+    font-size: 0.85em;
+    margin-right: 0.4em;
+    margin-bottom: 0.5em;
+}
