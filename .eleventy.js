@@ -1,10 +1,21 @@
-const markdownIt = require("markdown-it");
-const markdown = require("markdown-it-emoji").full;
+import markdownIt from "markdown-it";
+import fontAwesomePlugin from "@11ty/font-awesome";
 
-module.exports = function(eleventyConfig) {
+
+export default async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/projects");
-  const mdLib = markdownIt({ html: true, breaks: true, linkify: true }).use(markdown);
+  eleventyConfig.addPassthroughCopy("src/css");
+  
+  eleventyConfig.addPlugin(fontAwesomePlugin, {
+		transform: false,
+		shortcode: "icon",
+    defaultAttributes: {
+			class: "z-icon",
+		}
+	});
+
+  const mdLib = markdownIt({ html: true, breaks: true, linkify: true })
   eleventyConfig.setLibrary("md", mdLib);
 
   return {

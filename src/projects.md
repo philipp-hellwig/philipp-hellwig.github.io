@@ -5,14 +5,14 @@ title: Projects
 
 ### Projects
 ---
-<ul>
+I am currently still building this part of the website.
+<ul class="project-list">
 {%- for project in collections.project -%}
-  <li class="project-card">
-    <img class="project-img" src="{{ project.url }}image.png" alt="{{ project.data.title }} image" />
+  <li class="project-card" background-image="projects/default-background.png">
     <div class="project-info">
-      <h4>
-        <a href={{ project.url }}> {{ project.data.title }}</a>
-      </h4>
+      <h3>
+        <a class="underline-hover" href={{ project.url }}> {{ project.data.title }}</a>
+      </h3>
       {%- if project.data.topics %}
         <div class="project-tags">
           {%- for topic in project.data.topics %}
@@ -22,6 +22,5 @@ title: Projects
       {%- endif %}
     </div>
   </li>
-  <hr>
 {%- endfor -%}
 </ul>
