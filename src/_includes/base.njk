@@ -20,6 +20,7 @@
     <main>
       {{ content | safe }}
     </main>
+    <!-- TODO: make it so the profile card shows up before main content on mobile -->
     {% if page.url == "/" %}
       {% include "profile_card.njk" %}
     {% endif %}

@@ -8,11 +8,11 @@ title: Philipp Hellwig
 
 I’m Philipp, a psychology master's student at the University of Amsterdam.
 
-I am fascinated by our capabilities, and I am interested in understanding how they come to be. To this end, I am currently learning more about:
+That we can adapt quickly to new situations and pick up new skills is fascinating to me. To gain new insights in these topics, I am currently learning more about:
 
 <ul style="margin-left: 2em;">
-  <li>Cognitive modelling</li>
   <li>Artificial intelligence</li>
+  <li>Cognitive modelling</li>
   <li>Programming</li>
   <li>Statistics</li>
   <li>Complex systems (in particular agent-based modelling)</li>
