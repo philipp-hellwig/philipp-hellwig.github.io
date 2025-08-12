@@ -4,4 +4,3 @@ tags: project
 topics: [machine learning, analogy, transformers, interpretability]
 ---
 
-Content bla bla

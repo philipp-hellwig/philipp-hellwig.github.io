@@ -10,7 +10,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 1.3em;
     margin: auto;
     color: var(--text);
     background-color: var(--background);
@@ -22,7 +22,7 @@ body {
 }
 
 hr {
-  border: 0.2px solid;
+  border: 1.5px solid;
   color: var(--decoration);
 }
 
@@ -165,16 +165,21 @@ aside.profile-card img {
 /* Main content */
 main {
     flex: 1;
+    padding: 1em;
 }
 
-/* Responsive */
+/* Layout for smaller devices */
 @media (max-width: 1000px) {
-    .layout {
-    flex-direction: column;
-    }
     aside.profile-card {
-    flex: none;
-    width: 100%;
+        flex: none;
+        width: auto;
+        order: -1;
+        margin-bottom: 0;
+    }
+    .layout {
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
     }
 }
 
