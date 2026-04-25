@@ -291,3 +291,27 @@ figure figcaption::before {
   content: "Figure " counter(figures) ". ";
   font-weight: bold;
 }
+
+.project-media-panel {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.project-media-panel img {
+    height: 300px;       /* Your fixed height */
+    flex: 1;             /* Each image takes equal width */
+    object-fit: cover;   /* Crops image to fill the area without distortion */
+    border-radius: 4px;
+    border: 1px solid var(--decoration);
+}
+
+@media (max-width: 768px) {
+    .project-media-panel {
+        flex-direction: column;
+    }
+    .project-media-panel img {
+        width: 100%;
+        height: auto;    /* Let height be natural on mobile */
+    }
+}
