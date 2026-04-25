@@ -10,11 +10,12 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin: auto;
     color: var(--text);
     background-color: var(--background);
 }
+
 
 .pfp {
     width: 100px;
@@ -69,6 +70,13 @@ svg {
   color: var(--emphasis);
   vertical-align: middle;
 }
+
+/* target only SVGs inside .chart */
+.chart svg {
+  width: 400px !important;   /* override global svg size */
+  height: 200px !important;
+}
+
 
 .underline-hover {
     position: relative; /* needed for pseudo-element positioning */
@@ -233,4 +241,53 @@ main {
     font-size: 0.85em;
     margin-right: 0.4em;
     margin-bottom: 0.5em;
+}
+
+.project-header {
+    margin-bottom: 2em;
+}
+
+p img {
+    max-width: 100%;
+}
+
+figure.float-right {
+  float: right;
+  margin: 0 0 1rem 1rem;
+  max-width: 40%;
+  text-align: center;
+}
+
+figure.float-left {
+  float: left;
+  margin: 0 1rem 1rem 0;
+  max-width: 40%;
+  text-align: center;
+}
+
+figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+figure figcaption {
+  font-size: 0.9rem;
+  color: var(--text); /* adjust for your theme */
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+body {
+  counter-reset: figures;
+}
+
+figure {
+  counter-increment: figures;
+}
+
+figure figcaption::before {
+  content: "Figure " counter(figures) ". ";
+  font-weight: bold;
 }
