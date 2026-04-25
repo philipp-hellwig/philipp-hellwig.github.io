@@ -5,6 +5,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/katex@latest/dist/katex.min.css">
   <title>Meta-Learning Analogies</title>
 </head>
 <body>
@@ -23,13 +24,25 @@
   <!-- Two-column layout -->
   <div class="layout">
     <main>
-      <p>Content bla bla</p>
+      <div class="project-header">
+    <h2>
+        Meta-Learning Analogies
+    </h2>
+    21 Aug 2024
+    <hr>
+</div>
+<div style="text-align: justify"> 
+    <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><msub><mi>β</mi><mi>i</mi></msub><mi>x</mi><mo>+</mo><msub><mi>β</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\alpha = \beta_i x + \beta_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0528em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0528em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
+<div id="chart" class="chart"></div>
+</div>
 
     </main>
     <!-- TODO: make it so the profile card shows up before main content on mobile -->
     
     <!-- outputs all the icons used on the page -->
     
+    <script src="https://d3js.org/d3.v7.min.js" defer=""></script>
+    <script src="/js/chart.js" defer=""></script>
   </div>
 </body>
 </html>

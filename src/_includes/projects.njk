@@ -1,0 +1,13 @@
+---
+layout: base.njk
+---
+<div class="project-header">
+    <h2>
+        {{ title }}
+    </h2>
+    {{ date | postDate }}
+    <hr>
+</div>
+<div style="text-align: justify"> 
+    {{ content | latex | safe }}
+</div>

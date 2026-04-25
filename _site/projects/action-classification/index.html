@@ -5,7 +5,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/css/styles.css" rel="stylesheet">
-  <title>Video Action Classification</title>
+  <link rel="stylesheet" href="https://unpkg.com/katex@latest/dist/katex.min.css">
+  <title>Action Classification</title>
 </head>
 <body>
   <!-- Navbar at top -->
@@ -23,12 +24,44 @@
   <!-- Two-column layout -->
   <div class="layout">
     <main>
-      
+      <div class="project-header">
+    <h2>
+        Action Classification
+    </h2>
+    8 Jan 2025
+    <hr>
+</div>
+<div style="text-align: justify"> 
+    <p>In this project, we used machine learning teachniques to classify human actions in short video clips.</p>
+<h3>Motivation</h3>
+<p>Often times it can be helpful to classify what a person is doing on video footage, for instance for security or analysis.</p>
+<h3>Dataset</h3>
+<p>We used the the benchmark dataset HMDB-51 <a href="https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow></mrow><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">^1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></a> which is a dataset comprised of short clips of people performing various actions taken from YouTube or popular movies. A couple of frames from the videos in the dataset are shown below:</p>
+<p><img src="/projects/action-classification/example_action_frames.png" alt="Image of some action clips"></p>
+<h3>Approach</h3>
+<p>Since the dataset are videos we tested whether capturing the time dependence could be integrated more effectively by a recurrent neural network structure (LSTM).<br>
+To compare our recurrent implementation to a competitive baseline, we finetuned a pretrained convolutional neural network (CNN) called VGG-16 on the training split. We then used the CNN to predict each frame of a video and used the mode of the predictions as the final classification of the model.</p>
+<p>For the recurrent implementation, we extracted 20 frames per video. We then used our baseline CNN as an encoder that fed into the recurrent architecture as illustrated below:</p>
+<img src="/projects/action-classification/lstm_diagram.png" alt="The architecture of our recurrent model" width="500">
+<h3>Results</h3>
+<p>We found that the added recurrence was very beneficial since it boosted the accuracy of the recurrent models by around 15%. The best model achieved a <strong>3-split-accuracy of 72.9%</strong> which is relatively high considering the small model size and the simple architecture compared to state-of-the-art models which reach up to 90% accuracy.</p>
+<p>For more details, check out the Jupyter notebook in the <a href="https://github.com/philipp-hellwig/human-action-classification">GitHub repository</a>.</p>
+<h3>Limitations</h3>
+<p>- our baseline is not the strongest<br>
+- there is possibly some data leakage between training and test videos</p>
+<h3>References</h3>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow></mrow><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">^1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span> <a href="https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/">https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/</a></p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> <a href="https://paperswithcode.com/sota/action-recognition-in-videos-on-hmdb-51">https://paperswithcode.com/sota/action-recognition-in-videos-on-hmdb-51</a></p>
+
+</div>
+
     </main>
     <!-- TODO: make it so the profile card shows up before main content on mobile -->
     
     <!-- outputs all the icons used on the page -->
     
+    <script src="https://d3js.org/d3.v7.min.js" defer=""></script>
+    <script src="/js/chart.js" defer=""></script>
   </div>
 </body>
 </html>

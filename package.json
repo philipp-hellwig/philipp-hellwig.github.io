@@ -26,6 +26,10 @@
     "markdown-it-emoji": "^3.0.0"
   },
   "dependencies": {
-    "@11ty/font-awesome": "^1.0.0-beta.1"
+    "@11ty/font-awesome": "^1.0.0-beta.1",
+    "d3": "^7.9.0",
+    "eleventy-plugin-pdfembed": "^1.0.2",
+    "katex": "^0.16.22",
+    "luxon": "^3.7.1"
   }
 }
