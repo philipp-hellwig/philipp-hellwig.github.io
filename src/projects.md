@@ -24,7 +24,7 @@ It was quite challenging to make the multiplayer work but I have also found it r
 In the future, I would like to extend this to create interactive experimental environments that can tell us something new about how we and/or machines learn and interact.
 
 #### Boids
-During a course on Complexity Science during my Master's, I have learned about [self-organization in biology](https://santafeinstitute.github.io/ComplexPsych/ch5n.html#sec-Biology). One stunning example is flocking, which occurs in birds and fish. Below is a 2D implementation I wrote of [boids](https://en.wikipedia.org/wiki/Boids) (which model flocking behaviour):
+During a course on Complexity Science during my Master's, I have learned about [self-organization in biology](https://santafeinstitute.github.io/ComplexPsych/ch5n.html#sec-Biology). One stunning example is flocking, which occurs in birds and fish. The animals organize themselves into stunning formations as a result of local interactions between individual animals. Below is a 2D implementation I wrote of [boids](https://en.wikipedia.org/wiki/Boids) (which model flocking behaviour):
 
 <img src="/projects/boids/boids.gif" alt="short clip of boids aligning with each other." />
 
